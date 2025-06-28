@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <title>PantryPal</title>
+</head>
+
+<body>
+    <div class="title">
+        <span onclick="navigateTo('home')" class="title_link">
+            <h2> PantryPal </h2>
+        </span>
+        <h5> <i>Assisting you with all your pantry needs!</i> </h5>
+    </div> 
+
+    <!-- Add Review Modal --> 
+    <div class="modal fade" id="ReviewModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Review This Recipe </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm" action="/addReview">
+                    <label for="rating">Rating (between 0 and 5):</label>
+                    <input type="number" id="rating" name="rating" min="0" max="5"><br><br>
+
+                    <label for="rev">Short Review:</label>
+                    <input type="text" id="rev" name="rev" maxlength="500"><br><br>
+
+                    <button>Submit</button>
+                  </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex">
+        <div class="container user_menu" >
+            <i class="bi bi-person-circle user_icon"></i> <br>
+            <div class="btn-group-vertical" role="group" aria-label="Button group with 4 buttons">
+                {% if user == None %}
+                    <button type="button" class="btn color1" id="LoginBtn" data-toggle="modal" data-target="#loginModal"> Login </button>
+                {% else %}
+                    <div class="badge color1" style="margin-bottom: 20px;" > User {{user}} </div>
+                    <button type="button" class="btn color1" id="SettingsBtn" onclick="userSettings('{{user}}')"> Settings </button>
+                {% endif %}
+                <button type="button" class="btn color2" id="FridgeBtn"> My Fridge </button>
+                <button type="button" class="btn color3" id="LikedBtn"> Liked Recipes </button>
+                <button type="button" class="btn color4" id="Groceries"> Grocery List </button>
+            </div>
+        </div>
+    
+        <div class="container ">
+            <div class="d_flex recipe_buttons justify-content-center">
+                <button type="button" class="btn color1" id="AddReview" data-toggle="modal" data-target="#ReviewModal"> Add Review </button>
+            </div>
+            <div class="container results_box">
+                {% for review in reviews %}
+                    <div class="container recipe_result"> 
+                        <div class = "d-flex">
+                            <div class="badge color2">
+                                <h3> {{loop.index}} </h3>
+                            </div>
+                                <h3 style="padding:2px; text-decoration: underline;"> {{ review.rating }} Stars</h3>
+                        </div>
+                        <div style="overflow: scroll;">
+                            <p> 
+                                Review Id: {{ review.id }} <br>
+                                {{ review.review }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('ReviewModal').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            var userId = '{{user}}'; 
+            var recipe_id = '{{recipe}}'
+            var rev = document.getElementById('rev').value; 
+            var rating = document.getElementById('rating').value; 
+            var actionUrl = "/add_review?uid=" + userId + "&rid=" + recipe_id + "&rev=" + encodeURIComponent(rev) + "&rating=" + encodeURIComponent(rating);
+            window.location.href = actionUrl;
+        });
+    </script>
+
+    <script src="static/js/router.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

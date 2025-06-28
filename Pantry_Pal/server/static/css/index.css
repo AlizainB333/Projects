@@ -1,0 +1,124 @@
+body {
+    padding: 20px;
+    background-color: #F5E9E0;
+}
+
+.title {
+    color: #1E2D2F;
+    text-align: center;
+    font-family: Times, serif;
+    padding-bottom: 35px;
+}
+
+.color1 {
+    background-color: #0D1F2D;
+    color: white;
+}
+
+.color1:hover {
+    background-color: #03121d;
+    color: white;
+}
+
+.color2 {
+    background-color: #546A7B;
+}
+
+.color2:hover {
+    background-color: #3d586d;
+}
+
+.color3 {
+    background-color: #9EA3B0;
+}
+
+.color3:hover {
+    background-color: #575f75;
+}
+
+
+.color4 {
+    background-color: #F7CDCA;
+}
+
+.color4:hover {
+    background-color: #9f7775;
+}
+
+.btn-group-vertical .btn {
+    margin-bottom: 10px;
+}
+
+.recipe_buttons {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.btn-group .btn {
+    margin-right: 10px;
+}
+
+.results_box {
+    padding: 10px;
+    border: 2px solid;
+    border-color: #0D1F2D;
+    overflow-y:scroll;
+    height: 75vh;
+}
+
+.user_icon {
+    font-size: 65px;
+    color: #0D1F2D;
+    text-align: center;
+}
+
+.user_menu {
+    width: 10%;
+}
+
+.form-check:checked {
+    background-color: #546A7B !important; /* Blue */
+    border-color: #546A7B !important;     /* Border color */
+}
+
+.title_link {
+    color:#0D1F2D;
+}
+.title_link:hover {
+    color: #546A7B;
+    text-shadow: #0D1F2D;
+    cursor:pointer;
+}
+
+.recipe_result {
+    padding: 10px;
+    border: 2px solid;
+    border-color: #0D1F2D;
+}
+
+.recipe_link {
+    color:#0D1F2D;
+    text-decoration: underline;
+}
+.recipe_link:hover {
+    color: #546A7B;
+    text-shadow: #0D1F2D;
+    cursor:pointer;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+}
+  
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.liked-check-0 {
+    color: gray
+}
+
+.liked-check-1 {
+    color:pink;
+}
