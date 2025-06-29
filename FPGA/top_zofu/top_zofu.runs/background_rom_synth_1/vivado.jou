@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Dec  3 23:28:40 2023
+# Process ID: 12432
+# Current directory: D:/Xilinx/top_zofu/top_zofu.runs/background_rom_synth_1
+# Command line: vivado.exe -log background_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source background_rom.tcl
+# Log file: D:/Xilinx/top_zofu/top_zofu.runs/background_rom_synth_1/background_rom.vds
+# Journal file: D:/Xilinx/top_zofu/top_zofu.runs/background_rom_synth_1\vivado.jou
+# Running On: PeePeePooPoo, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 16841 MB
+#-----------------------------------------------------------
+source background_rom.tcl -notrace

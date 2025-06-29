@@ -1,0 +1,20 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cm_behav xil_defaultlib.cm xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3755] too many parameters for module instance 'cm' [D:/Xilinx/top_zofu/top_zofu.srcs/sim_1/new/tb.sv:32]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Xilinx/top_zofu/top_zofu.srcs/sim_1/new/tb.sv" Line 16. Module cm has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Xilinx/top_zofu/top_zofu.srcs/sim_1/new/tb.sv" Line 16. Module cm has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Xilinx/top_zofu/top_zofu.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Xilinx/top_zofu/top_zofu.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.common
+Compiling module xil_defaultlib.color_mapper
+Compiling module xil_defaultlib.cm
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cm_behav

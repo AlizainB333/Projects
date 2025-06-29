@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Lab 5.srcs/sources_1/new/ALU.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/ISDU.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/Instantiateram.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/Mem2IO.sv" \
+"../../../../Lab 5.srcs/sources_1/new/REG_FILE.sv" \
+"../../../../Lab 5.srcs/sources_1/new/SEXT.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/hex.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/memory_contents.sv" \
+"../../../../Lab 5.srcs/sources_1/new/registers.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/slc3.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/slc3_testtop.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/synchronizers.sv" \
+"../../../../../lab5_provided_fa23/provided/srcs/test_memory.sv" \
+"../../../../Lab 5.srcs/sim_1/new/testbench.sv" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,530 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Dec  3 23:46:42 2023
+# Process ID: 19528
+# Current directory: D:/Xilinx/top_zofu/top_zofu.runs/synth_1
+# Command line: vivado.exe -log toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source toplevel.tcl
+# Log file: D:/Xilinx/top_zofu/top_zofu.runs/synth_1/toplevel.vds
+# Journal file: D:/Xilinx/top_zofu/top_zofu.runs/synth_1\vivado.jou
+# Running On: PeePeePooPoo, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 16841 MB
+#-----------------------------------------------------------
+source toplevel.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Xilinx/ip_repo/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental D:/Xilinx/top_zofu/top_zofu.srcs/utils_1/imports/synth_1/toplevel.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Xilinx/top_zofu/top_zofu.srcs/utils_1/imports/synth_1/toplevel.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top toplevel -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15956
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'rom_address', assumed default net type 'wire' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/imports/src/color_mapper.sv:152]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1189.430 ; gain = 408.363
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'toplevel' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/new/toplevel.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/imports/src/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/imports/src/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/new/toplevel.sv:39]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/new/toplevel.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'color_mapper' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/imports/src/color_mapper.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'HUD_rom' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'HUD_rom' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'HUD_palette' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'HUD_palette' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/imports/src/color_mapper.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'game_theory' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/game_theory.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'game_theory' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/game_theory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'background_example' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/background/background_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'background_rom' [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/background_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'background_rom' (0#1) [D:/Xilinx/top_zofu/top_zofu.runs/synth_1/.Xil/Vivado-19528-PeePeePooPoo/realtime/background_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'background_palette' [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/background/background_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'background_palette' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/background/background_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'background_example' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/background/background_example.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'toplevel' (0#1) [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/imports/sources_1/new/toplevel.sv:3]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+WARNING: [Synth 8-3848] Net memory in module/entity HUD_rom does not have driver. [D:/Xilinx/top_zofu/top_zofu.srcs/sources_1/new/roms.sv:7]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port clk in module game_theory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up in module game_theory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port down in module game_theory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][15] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][14] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][13] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][12] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][11] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][10] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][9] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][8] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][7] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][6] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][state_counter][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedX][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][speedY][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][health][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][health][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][health][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[0][health][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][15] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][14] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][13] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][12] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][11] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][10] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][9] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][8] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][7] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][6] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][state_counter][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedX][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][5] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][4] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][speedY][0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][health][3] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][health][2] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][health][1] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zoufus_data[1][health][0] in module color_mapper is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:26 ; elapsed = 00:02:26 . Memory (MB): peak = 2153.270 ; gain = 1372.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:02:26 . Memory (MB): peak = 2153.270 ; gain = 1372.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:26 ; elapsed = 00:02:26 . Memory (MB): peak = 2153.270 ; gain = 1372.203
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.749 . Memory (MB): peak = 2153.270 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Finished Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Finished Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/background_rom/background_rom/background_rom_in_context.xdc] for cell 'background/background_rom'
+Finished Parsing XDC File [d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/background_rom/background_rom/background_rom_in_context.xdc] for cell 'background/background_rom'
+Parsing XDC File [D:/Xilinx/top_zofu/top_zofu.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+Finished Parsing XDC File [D:/Xilinx/top_zofu/top_zofu.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/top_zofu/top_zofu.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2530.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2530.211 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:04:30 ; elapsed = 00:04:31 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:04:30 ; elapsed = 00:04:31 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/Xilinx/top_zofu/top_zofu.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 16).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for background/background_rom. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:04:30 ; elapsed = 00:04:31 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'bullet_cur_reg' in module 'game_theory'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                              000
+                 iSTATE1 |                             0010 |                              001
+                 iSTATE2 |                             0100 |                              010
+                  iSTATE |                             1000 |                              011
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'bullet_cur_reg' using encoding 'one-hot' in module 'game_theory'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:24:28 ; elapsed = 00:24:32 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 8     
+	   3 Input   18 Bit       Adders := 2     
+	   2 Input   18 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 5     
+	   3 Input   17 Bit       Adders := 4     
+	   3 Input   16 Bit       Adders := 4     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 21    
+	   2 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x280).
+DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x280).
+DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
+DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x1e0).
+DSP Report: operator rom_address2 is absorbed into DSP rom_address2.
+DSP Report: Generating DSP rom_address, operation Mode is: C+A*(B:0x280).
+DSP Report: operator rom_address is absorbed into DSP rom_address.
+DSP Report: operator rom_address0 is absorbed into DSP rom_address.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:42 ; elapsed = 00:25:45 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|color_mapper       | A*(B:0x280)   | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example | A*(B:0x280)   | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example | A*(B:0x1e0)   | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example | C+A*(B:0x280) | 11     | 10     | 11     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:25:49 ; elapsed = 00:25:53 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:25:49 ; elapsed = 00:25:53 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (game/FSM_onehot_bullet_cur_reg[3]) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (game/FSM_onehot_bullet_cur_reg[2]) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (game/FSM_onehot_bullet_cur_reg[1]) is unused and will be removed from module toplevel.
+WARNING: [Synth 8-3332] Sequential element (game/FSM_onehot_bullet_cur_reg[0]) is unused and will be removed from module toplevel.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:25:50 ; elapsed = 00:25:53 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|background_example | A'*B        | 10     | 10     | -      | -      | 20     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example | A'*B        | 10     | 9      | -      | -      | 19     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example | C+A*B       | 11     | 10     | 11     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |clk_wiz_0      |         1|
+|2     |hdmi_tx_0      |         1|
+|3     |background_rom |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |background_rom |     1|
+|2     |clk_wiz        |     1|
+|3     |hdmi_tx        |     1|
+|4     |CARRY4         |    44|
+|5     |DSP48E1        |     3|
+|7     |LUT1           |    10|
+|8     |LUT2           |    87|
+|9     |LUT3           |    57|
+|10    |LUT4           |    71|
+|11    |LUT5           |    34|
+|12    |LUT6           |    65|
+|13    |FDRE           |    22|
+|14    |IBUF           |     1|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:25:53 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:21:41 ; elapsed = 00:24:10 . Memory (MB): peak = 2530.211 ; gain = 1372.203
+Synthesis Optimization Complete : Time (s): cpu = 00:25:54 ; elapsed = 00:25:57 . Memory (MB): peak = 2530.211 ; gain = 1749.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2530.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2530.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 48d9b9cf
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 175 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:25:57 ; elapsed = 00:26:01 . Memory (MB): peak = 2530.211 ; gain = 2124.836
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/top_zofu/top_zofu.runs/synth_1/toplevel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file toplevel_utilization_synth.rpt -pb toplevel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 00:12:49 2023...

@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log Processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Processor.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 377.969 ; gain = 44.785
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 2/Lab_2.2/Lab_2.2.srcs/utils_1/imports/synth_1/Processor.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 2/Lab_2.2/Lab_2.2.srcs/utils_1/imports/synth_1/Processor.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Processor -part xc7s25csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4908
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 820.129 ; gain = 409.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Processor' [C:/Users/Azain/Downloads/design_source/Processor.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'register_unit' [C:/Users/Azain/Downloads/design_source/Register_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_4' [C:/Users/Azain/Downloads/design_source/Reg_4.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_4' (0#1) [C:/Users/Azain/Downloads/design_source/Reg_4.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'register_unit' (0#1) [C:/Users/Azain/Downloads/design_source/Register_unit.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'compute' [C:/Users/Azain/Downloads/design_source/compute.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Downloads/design_source/compute.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'compute' (0#1) [C:/Users/Azain/Downloads/design_source/compute.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'router' [C:/Users/Azain/Downloads/design_source/Router.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Downloads/design_source/Router.sv:7]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Downloads/design_source/Router.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'router' (0#1) [C:/Users/Azain/Downloads/design_source/Router.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/Users/Azain/Downloads/design_source/Control.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Downloads/design_source/Control.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'control' (0#1) [C:/Users/Azain/Downloads/design_source/Control.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/Azain/Downloads/design_source/HexDriver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Downloads/design_source/HexDriver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/Azain/Downloads/design_source/HexDriver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sync' [C:/Users/Azain/Downloads/design_source/Synchronizers.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sync' (0#1) [C:/Users/Azain/Downloads/design_source/Synchronizers.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'Processor' (0#1) [C:/Users/Azain/Downloads/design_source/Processor.sv:8]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 910.438 ; gain = 499.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 910.438 ; gain = 499.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 910.438 ; gain = 499.883
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s25csga324-1
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                       A |                              000 |                              000
+                       B |                              001 |                              001
+                       C |                              010 |                              010
+                       D |                              011 |                              011
+                       E |                              100 |                              100
+                       F |                              101 |                              101
+                  iSTATE |                              110 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 910.438 ; gain = 499.883
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design Processor has port hex_seg[7] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     1|
+|4     |LUT3   |    11|
+|5     |LUT4   |     9|
+|6     |LUT5   |     3|
+|7     |LUT6   |    20|
+|8     |FDRE   |    41|
+|9     |IBUF   |    14|
+|10    |OBUF   |    24|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+--------------+------+
+|      |Instance           |Module        |Cells |
++------+-------------------+--------------+------+
+|1     |top                |              |   129|
+|2     |  HexA             |HexDriver     |    27|
+|3     |  \Din_sync[0]     |sync          |     1|
+|4     |  \Din_sync[1]     |sync_0        |     1|
+|5     |  \Din_sync[2]     |sync_1        |     1|
+|6     |  \Din_sync[3]     |sync_2        |     1|
+|7     |  \F_sync[0]       |sync_3        |     1|
+|8     |  \F_sync[1]       |sync_4        |     1|
+|9     |  \F_sync[2]       |sync_5        |     1|
+|10    |  \R_sync[0]       |sync_6        |     1|
+|11    |  \R_sync[1]       |sync_7        |     1|
+|12    |  \button_sync[0]  |sync_8        |     1|
+|13    |  \button_sync[1]  |sync_9        |     1|
+|14    |  \button_sync[2]  |sync_10       |     1|
+|15    |  \button_sync[3]  |sync_11       |     1|
+|16    |  control_unit     |control       |    16|
+|17    |  reg_unit         |register_unit |    34|
+|18    |    reg_A          |reg_4         |    14|
+|19    |    reg_B          |reg_4_12      |    20|
++------+-------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1080.641 ; gain = 670.086
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1087.496 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 4a7cfc1a
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1182.426 ; gain = 779.590
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 2/Lab_2.2/Lab_2.2.runs/synth_1/Processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  7 23:14:16 2023...

@@ -1,0 +1,459 @@
+
+*** Running vivado
+    with args -log slc3_sramtop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source slc3_sramtop.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source slc3_sramtop.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 377.008 ; gain = 62.812
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/utils_1/imports/synth_1/slc3_sramtop.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/utils_1/imports/synth_1/slc3_sramtop.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top slc3_sramtop -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2240
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11067] parameter 'op_ADD' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:27]
+WARNING: [Synth 8-11067] parameter 'op_AND' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:28]
+WARNING: [Synth 8-11067] parameter 'op_NOT' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:29]
+WARNING: [Synth 8-11067] parameter 'op_BR' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:30]
+WARNING: [Synth 8-11067] parameter 'op_JMP' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:31]
+WARNING: [Synth 8-11067] parameter 'op_JSR' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:32]
+WARNING: [Synth 8-11067] parameter 'op_LDR' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:33]
+WARNING: [Synth 8-11067] parameter 'op_STR' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:34]
+WARNING: [Synth 8-11067] parameter 'op_PSE' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:35]
+WARNING: [Synth 8-11067] parameter 'NO_OP' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:37]
+WARNING: [Synth 8-11067] parameter 'R0' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:39]
+WARNING: [Synth 8-11067] parameter 'R1' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:40]
+WARNING: [Synth 8-11067] parameter 'R2' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:41]
+WARNING: [Synth 8-11067] parameter 'R3' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:42]
+WARNING: [Synth 8-11067] parameter 'R4' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:43]
+WARNING: [Synth 8-11067] parameter 'R5' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:44]
+WARNING: [Synth 8-11067] parameter 'R6' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:45]
+WARNING: [Synth 8-11067] parameter 'R7' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:46]
+WARNING: [Synth 8-11067] parameter 'p' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:48]
+WARNING: [Synth 8-11067] parameter 'z' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:49]
+WARNING: [Synth 8-11067] parameter 'zp' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:50]
+WARNING: [Synth 8-11067] parameter 'n' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:51]
+WARNING: [Synth 8-11067] parameter 'np' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:52]
+WARNING: [Synth 8-11067] parameter 'nz' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:53]
+WARNING: [Synth 8-11067] parameter 'nzp' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:54]
+WARNING: [Synth 8-11067] parameter 'outHEX' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:56]
+WARNING: [Synth 8-11067] parameter 'inSW' declared inside package 'SLC3_2' shall be treated as localparam [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/SLC3_2.sv:57]
+WARNING: [Synth 8-11017] non-void function 'opRET' is called without empty parentheses [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:150]
+WARNING: [Synth 8-11017] non-void function 'opRET' is called without empty parentheses [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:222]
+WARNING: [Synth 8-11017] non-void function 'opRET' is called without empty parentheses [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:240]
+WARNING: [Synth 8-11017] non-void function 'opRET' is called without empty parentheses [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:258]
+INFO: [Synth 8-11241] undeclared symbol 'tmp_Ben_Out', assumed default net type 'wire' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:255]
+WARNING: [Synth 8-6901] identifier 'BUS' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:101]
+WARNING: [Synth 8-6901] identifier 'ADDROUT' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:102]
+WARNING: [Synth 8-6901] identifier 'DoutMDR' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:120]
+WARNING: [Synth 8-6901] identifier 'ALUOUT' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:121]
+WARNING: [Synth 8-6901] identifier 'ADDROUT' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:122]
+WARNING: [Synth 8-6901] identifier 'DinMDR' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:129]
+WARNING: [Synth 8-6901] identifier 'DinMDR' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:131]
+WARNING: [Synth 8-6901] identifier 'DinMDR' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:132]
+WARNING: [Synth 8-6901] identifier 'SR1OUT' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:182]
+WARNING: [Synth 8-6901] identifier 'SR2OUT' is used before its declaration [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:206]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1193.652 ; gain = 411.141
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'slc3_sramtop' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3_sramtop.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sync' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/synchronizers.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'sync' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/synchronizers.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'slc3' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/hex.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'registers' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:22]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:22]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:98]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:118]
+INFO: [Synth 8-6157] synthesizing module 'SEXT6' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'SEXT6' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:38]
+INFO: [Synth 8-6157] synthesizing module 'SEXT9' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'SEXT9' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'SEXT11' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:75]
+INFO: [Synth 8-6155] done synthesizing module 'SEXT11' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:75]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:161]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:178]
+INFO: [Synth 8-6157] synthesizing module 'SEXT5' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'SEXT5' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/SEXT.sv:21]
+WARNING: [Synth 8-689] width (16) of port connection 'IR' does not match port width (5) of module 'SEXT5' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:199]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:203]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/ALU.sv:22]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/ALU.sv:30]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/ALU.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'SR1MUX' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:137]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:146]
+INFO: [Synth 8-6155] done synthesizing module 'SR1MUX' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:137]
+INFO: [Synth 8-6157] synthesizing module 'DRMUX' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:158]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:167]
+INFO: [Synth 8-6155] done synthesizing module 'DRMUX' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:158]
+INFO: [Synth 8-6157] synthesizing module 'REG_FILE' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:47]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:75]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:106]
+INFO: [Synth 8-6155] done synthesizing module 'REG_FILE' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/REG_FILE.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'registers__parameterized0' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:22]
+	Parameter N bound to: 0 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'registers__parameterized0' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/sources_1/new/registers.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Mem2IO' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Mem2IO.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'Mem2IO' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Mem2IO.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'ISDU' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/ISDU.sv:21]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/ISDU.sv:121]
+WARNING: [Synth 8-151] case item 5'b10011 is unreachable [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/ISDU.sv:121]
+INFO: [Synth 8-6155] done synthesizing module 'ISDU' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/ISDU.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'slc3' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Instantiateram' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:17]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:61]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:80]
+INFO: [Synth 8-6155] done synthesizing module 'Instantiateram' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/Instantiateram.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.runs/synth_1/.Xil/Vivado-14136-DESKTOP-D46B4R0/realtime/blk_mem_gen_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.runs/synth_1/.Xil/Vivado-14136-DESKTOP-D46B4R0/realtime/blk_mem_gen_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'slc3_sramtop' (0#1) [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3_sramtop.sv:3]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ADDR_reg' and it is trimmed from '16' to '10' bits. [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/lab5_provided_fa23/provided/srcs/slc3_sramtop.sv:49]
+WARNING: [Synth 8-7129] Port IR_11 in module ISDU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[15] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[14] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[13] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[12] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[11] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[10] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[9] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[8] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[7] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[6] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[5] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[4] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR[3] in module REG_FILE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[15] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[14] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[13] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[12] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[8] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[7] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[6] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[5] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[4] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[3] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[2] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[1] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[0] in module DRMUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[15] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[14] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[13] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[12] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[5] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[4] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[3] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[2] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[1] in module SR1MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IR_REG[0] in module SR1MUX is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1291.531 ; gain = 509.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1291.531 ; gain = 509.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1291.531 ; gain = 509.020
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1291.531 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'ram0'
+Finished Parsing XDC File [c:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'ram0'
+Parsing XDC File [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/constrs_1/new/Lab 5.xdc]
+Finished Parsing XDC File [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/constrs_1/new/Lab 5.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.srcs/constrs_1/new/Lab 5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/slc3_sramtop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/slc3_sramtop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1334.430 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1334.430 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for ram0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:49 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'ISDU'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Instantiateram'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  Halted |                            00000 |                            00000
+                    S_18 |                            00001 |                            00011
+                  S_33_1 |                            00010 |                            00100
+                  S_33_2 |                            00011 |                            00101
+                  S_33_3 |                            00100 |                            00110
+                    S_35 |                            00101 |                            00111
+                    S_32 |                            00110 |                            01000
+                    S_01 |                            00111 |                            01001
+                    S_05 |                            01000 |                            01010
+                    S_09 |                            01001 |                            01011
+                    S_06 |                            01010 |                            01100
+                  S_25_1 |                            01011 |                            01101
+                  S_25_2 |                            01100 |                            11001
+                  S_25_3 |                            01101 |                            11010
+                    S_27 |                            01110 |                            01110
+                    S_07 |                            01111 |                            01111
+                    S_23 |                            10000 |                            10000
+                  S_16_1 |                            10001 |                            10001
+                  iSTATE |                            10010 |                            10010
+                    S_04 |                            10011 |                            10100
+                    S_21 |                            10100 |                            10101
+                    S_12 |                            10101 |                            10110
+                    S_00 |                            10110 |                            11000
+                    S_22 |                            10111 |                            10111
+                PauseIR1 |                            11000 |                            00001
+                PauseIR2 |                            11001 |                            00010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'ISDU'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               mem_write |                               00 |                               01
+                    done |                               01 |                               10
+                    idle |                               10 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Instantiateram'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:52 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 13    
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 23    
+	   4 Input   16 Bit        Muxes := 3     
+	 176 Input   16 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	  25 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	  10 Input    5 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	  23 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 18    
+	   8 Input    1 Bit        Muxes := 8     
+	  23 Input    1 Bit        Muxes := 18    
+	  26 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[15] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[14] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[13] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[12] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[11] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port LED[10] driven by constant 0
+WARNING: [Synth 8-3917] design slc3_sramtop has port hex_seg[7] driven by constant 1
+WARNING: [Synth 8-3917] design slc3_sramtop has port hex_segB[7] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+---------------+---------------+----------------+
+|Module Name  | RTL Object    | Depth x Width | Implemented As | 
++-------------+---------------+---------------+----------------+
+|slc3_sramtop | instaRam/data | 256x16        | LUT            | 
++-------------+---------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:33 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |BUFG        |     1|
+|3     |CARRY4      |    19|
+|4     |LUT1        |    13|
+|5     |LUT2        |     4|
+|6     |LUT3        |    41|
+|7     |LUT4        |    57|
+|8     |LUT5        |   108|
+|9     |LUT6        |   247|
+|10    |MUXF7       |     6|
+|11    |FDCE        |    26|
+|12    |FDRE        |   246|
+|13    |IBUF        |    20|
+|14    |OBUF        |    40|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:47 . Memory (MB): peak = 1334.430 ; gain = 551.918
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:42 . Memory (MB): peak = 1334.430 ; gain = 509.020
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:48 . Memory (MB): peak = 1334.430 ; gain = 551.918
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1335.352 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1339.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: c2725358
+INFO: [Common 17-83] Releasing license: Synthesis
+86 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:02:04 . Memory (MB): peak = 1339.043 ; gain = 930.172
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Azain/Documents/College/Fall 2023/ECE 385/Lab 5/Lab 5/Lab 5.runs/synth_1/slc3_sramtop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file slc3_sramtop_utilization_synth.rpt -pb slc3_sramtop_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  6 14:39:47 2023...
