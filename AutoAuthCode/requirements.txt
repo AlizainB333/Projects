@@ -1,2 +1,4 @@
 imapclient
-mailslurp_client
+selenium
+Flask
+flask-cors
