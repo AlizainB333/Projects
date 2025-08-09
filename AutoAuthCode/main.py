@@ -7,7 +7,20 @@ APP_PASSWORD = "yrmf jife tqns bvwk".replace(" ", "")
 
 
 def get_otp_from_email(url=None):
-    # Connect to the mailbox and fetch the data from emails
+    """
+    Once a top request is sent the praser may be given 
+    current url infromation to filter out emails 
+    related to otp code. Emails are parsed and decoded
+    to find otp code.
+
+    Args:
+        url (string): Optional Url of current browser tab related to otp code
+
+    Returns:
+        tuple[str,bool]:
+            Otp code if found | failure message
+            Flag to determine if code is found true if found otherwsie false
+    """
     mailBox = connect_to_mailbox(EMAIL, APP_PASSWORD)
     rawEmails = fetch_unseen_mail(mailBox,10)
 

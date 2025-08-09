@@ -22,7 +22,7 @@ def otp_event():
 
     return jsonify({
         "status": "ok", 
-        "message": "OTP event received",
+        "message": "OTP Code received",
         "otpCode": otpCode,
         "codeFound": otpFlag
     })
