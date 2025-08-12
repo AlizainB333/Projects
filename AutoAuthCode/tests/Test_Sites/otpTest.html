@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Test Site</title>
+</head>
+<body>
+
+    <h1>Enter your OTP</h1>
+    <button id="send_otp_email" onclick="alert('OTP Requested')">Request Otp</button> <br><br>
+    <input type="text" name="authCode" placeholder="Enter code" />
+    <button onclick="alert('Submitted!')">Submit</button>
+
+    <script>
+        // Logic for request button to send out emails
+        document.getElementById("send_otp_email").addEventListener("click",()=> {
+            fetch("http://127.0.0.1:5000/otp_email", {
+                method: "POST"
+            })
+            .then(responce => responce.json())
+            .then(data => {
+                console.log("Server Responce", data);
+                alert("OTP SENT");
+            })
+            .catch(error => console.log("Failure Email not sent"))
+        });
+    </script>
+</body>
+</html>

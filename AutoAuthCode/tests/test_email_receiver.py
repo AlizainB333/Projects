@@ -2,38 +2,27 @@ import smtplib
 from email.mime.text import MIMEText
 import unittest
 from email_parser.parser import check_for_auth_code
-
-
+import random
 
 smtp_server = "smtp.gmail.com"
-smtp_port = 587
+smtp_port = 465
 sender_email = "azainbandukwala333@gmail.com"
 receiver_email = "azainbandukwala333@gmail.com"  # same or different address
 password = "yrmf jife tqns bvwk".replace(" ", "")
 
+def send_test_otp_email():
+    otp_code = random.randint(100000,999999)
 
-message = MIMEText("Your code is 123456")
-message["Subject"] = "Test Auth Code"
-message["From"] = sender_email
-message["To"] = receiver_email
-
-with smtplib.SMTP(smtp_server, smtp_port) as server:
-    server.starttls()
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message.as_string())
-
-print("Test email sent!")
-
-def send_custom_email(subjectMessage: str, bodyMessage: str):
-    message = MIMEText(bodyMessage)
-    message["Subject"] = subjectMessage
+    # Creating a message to send
+    message = MIMEText(f"Your code is {otp_code}")
+    message["Subject"] = f"Test Auth Code is {otp_code}"
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message.as_string())
+    with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
+        server.login(sender_email,password)
+        server.send_message(message)
+        print(f"Sent test OTP {otp_code} to {sender_email}")
 
 
 class TestEmail(unittest.TestCase):
