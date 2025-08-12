@@ -45,6 +45,7 @@ def decode_email(rawEmail,url=None):
     # Different parts of the email
     decodedEmail = message_from_bytes(rawEmail)
     subject = str(make_header(decode_header(decodedEmail['subject'])))
+    # print(f"Subject {subject}")
     subjectContainsOTPInfo = is_email_subject_valid(subject,domain) # Check if subject related to OTP Info
 
     # If the email subject is related to Auth Info
@@ -58,13 +59,13 @@ def decode_email(rawEmail,url=None):
             if decodedEmail.is_multipart():
                 for part in decodedEmail.walk():
                     contentType = part.get_content_type()
-                    print(contentType)
+                    # print(contentType)
                     if contentType in ("text/plain", "text/html"):
                         body = part.get_payload(decode=True).decode()
                         return check_for_auth_code(body)
                     else: 
                         continue
-                print(f"Subject: {subject}")
+                # print(f"Subject: {subject}")
                 return None, False 
             else:
                 # Email is not multpart check email body for otp info
