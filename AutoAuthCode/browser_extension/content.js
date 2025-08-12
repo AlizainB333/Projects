@@ -1,9 +1,8 @@
 console.log("Injected OTP success");
-
 const otpButton = document.createElement("button");
 
 //Style Button
-otpButton.textContent = "OTP Sent";
+otpButton.textContent = "Autofill Otp";     
 otpButton.style.position = "fixed";
 otpButton.style.bottom = "20px";
 otpButton.style.right = "20px";
@@ -16,6 +15,7 @@ otpButton.style.borderRadius = "6px";
 otpButton.style.cursor = "pointer";
 otpButton.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.2)";
 otpButton.style.fontSize = "14px";
+otpButton.style.display = "none";
 
 document.body.appendChild(otpButton);
 
@@ -39,19 +39,39 @@ function postOtpCode(otpCode) {
     }
 }
 
-// If OTP button clicked then send message to server to fetch code 
+/**
+ * Checks if otp button is clicked to send message to server 
+ * to parse and find code 
+ */
+
 otpButton.addEventListener('click', ()=> {
     console.log("OTP was sent");
-    chrome.runtime.sendMessage({
+    browser.runtime.sendMessage({
         type: "otp sent",
         url: window.location.href
     });
 })
 
-// Check if code found
-chrome.runtime.onMessage.addListener((message, sender, sendResponce) => {
+/**
+ * Checks if Code is Found and will paste to current browser tab
+ * Also checks for otp button toggle command 
+ */
+
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === "OTP Code Received") {
         console.log("Received Code", message.otpCode);
         postOtpCode(message.otpCode);
+    }
+    // If the button key is pressed toggle button
+    else if (message.type === "toggle-otp-button") {
+        if (otpButton.style.display === "none") {
+            console.log("Showing Otp Button");
+            otpButton.style.display = "block";
+
+        }
+        else {
+            console.log("Hiding Otp Button");
+            otpButton.style.display = "none";
+        }
     }
 })
