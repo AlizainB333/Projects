@@ -1,9 +1,24 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from main import get_otp_from_email
+from tests.test_email_receiver import send_test_otp_email
+import time
 
 app = Flask(__name__)
 CORS(app)  # This enables CORS for all routes by default
+
+# Route to Test Emails with Request OTP Button
+@app.route('/otp_email',methods=['POST'])
+
+def send_otp_email():
+    print("Sending Email")
+
+    send_test_otp_email()
+
+    return jsonify({
+        "status": "ok",
+        "message": "Email Sent",
+    })
 
 
 @app.route('/otp_event', methods=['POST'])
@@ -13,8 +28,14 @@ def otp_event():
     url = data.get('url', 'No URL sent')
     print(f"Received OTP event from URL: {url}")
 
+    # For testing send email with rand otp code
+    # send_test_otp_email()
+
+    #Add Delay so email can send first (Test this method else try polling)
+    # time.sleep(5)
+
     otpCode, otpFlag = get_otp_from_email(url)  
-    
+
     if otpFlag: 
         print(f"OTP Code: {otpCode}")
     else:
@@ -27,8 +48,6 @@ def otp_event():
         "codeFound": otpFlag
     })
 
-    # Here you can trigger your email fetch / parser or other logic
-    # For now, just respond back with success
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
