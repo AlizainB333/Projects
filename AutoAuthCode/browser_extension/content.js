@@ -51,7 +51,7 @@ otpButton.addEventListener('click', ()=> {
 // Check if code found
 chrome.runtime.onMessage.addListener((message, sender, sendResponce) => {
     if (message.type === "OTP Code Received") {
-        postOtpCode(message.otpCode);
         console.log("Received Code", message.otpCode);
+        postOtpCode(message.otpCode);
     }
 })
