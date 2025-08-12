@@ -21,8 +21,10 @@ def get_otp_from_email(url=None):
             Otp code if found | failure message
             Flag to determine if code is found true if found otherwsie false
     """
+    print("Checking for Codes")
     mailBox = connect_to_mailbox(EMAIL, APP_PASSWORD)
-    rawEmails = fetch_unseen_mail(mailBox,10)
+    rawEmails = fetch_unseen_mail(mailBox,1)
+    logout(mailBox)
 
     for rawEmail in rawEmails:
         otpCode, otpFound = decode_email(rawEmail)
@@ -34,11 +36,5 @@ def get_otp_from_email(url=None):
     return "OTP Not Found", False
 
 
-# authCode, foundFlag = get_otp_from_email()
-
-# print(authCode)
-    
-
-    
-
-
+# code, flag = get_otp_from_email()
+# print(code)
