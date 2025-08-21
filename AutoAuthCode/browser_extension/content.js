@@ -46,6 +46,7 @@ function postOtpCode(otpCode) {
 
 otpButton.addEventListener('click', ()=> {
     console.log("OTP was sent");
+    otpButton.textContent = "Looking For Code ..."
     browser.runtime.sendMessage({
         type: "otp sent",
         url: window.location.href
@@ -60,7 +61,17 @@ otpButton.addEventListener('click', ()=> {
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === "OTP Code Received") {
         console.log("Received Code", message.otpCode);
+        otpButton.textContent = "Code Found";
         postOtpCode(message.otpCode);
+        setTimeout(() => {
+            otpButton.textContent = "AutoFill OTP";
+        },5000);
+    }
+    if(message.type === "OTP Code Not Found") {
+        otpButton.textContent = "Code Not Found";
+                setTimeout(() => {
+            otpButton.textContent = "AutoFill OTP";
+        },5000);
     }
     // If the button key is pressed toggle button
     else if (message.type === "toggle-otp-button") {

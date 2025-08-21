@@ -24,6 +24,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
           otpCode: data.otpCode
         });
       } else {
+        chrome.tabs.sendMessage(sender.tab.id, {
+          type: "OTP Code Not Found"
+        });
         console.warn("OTP Code Not Found")
       }
       console.log("Response from Python:", data);
